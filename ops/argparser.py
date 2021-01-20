@@ -71,8 +71,6 @@ def argparser():
                         help="coefficients for DDM loss")
     parser.add_argument('--aug_times', type=int, default=5,
                         help="random augmentation times in strong augmentation")
-    parser.add_argument('--save_path', default="", type=str, help="model and record save path")
-    parser.add_argument("--init_method", default="", type=str, help="Cloud default method init")
     # idea from swav#adds crops for it
     parser.add_argument("--nmb_crops", type=int, default=[1, 1, 1, 1, 1], nargs="+",
                         help="list of number of crops (example: [2, 6])")  # when use 0 denotes the multi crop is not applied

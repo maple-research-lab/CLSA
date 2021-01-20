@@ -1,0 +1,1 @@
+python3 main_clsa.py --data=/data/imagenet --workers=32 --epochs=200 --start_epoch=0 --batch_size=256 --lr=0.03 --weight_decay=1e-4 --print_freq=100 --world_size=1 --rank=0 --dist_url=tcp://localhost:10001 --moco_dim=128 --moco_k=65536 --moco_m=0.999 --moco_t=0.2 --alpha=1 --aug_times=5 --nmb_crops 1 1   --clsa_t 0.2 --sym 0

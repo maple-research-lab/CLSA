@@ -24,10 +24,10 @@ def argparser():
                         metavar='LR', help='initial learning rate', dest='lr')
     parser.add_argument('--momentum', default=0.9, type=float, metavar='M',
                         help='momentum of SGD solver')
-    parser.add_argument('--wd', '--weight_decay', default=1e-4, type=float,
+    parser.add_argument('--weight_decay', default=1e-4, type=float,
                         metavar='W', help='weight decay (default: 1e-4)',
                         dest='weight_decay of SGD solver')
-    parser.add_argument('-p', '--print_freq', default=10, type=int,
+    parser.add_argument('--print_freq', default=10, type=int,
                         metavar='N', help='print frequency (default: 10)')
     parser.add_argument('--resume', default='', type=str, metavar='PATH',
                         help='path to latest checkpoint (default: none)')

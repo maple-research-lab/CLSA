@@ -1,7 +1,7 @@
 #modified from https://github.com/facebookresearch/swav/blob/master/src/multicropdataset.py
 from torchvision import transforms
 from data_processing.RandAugment import RandAugment
-import moco.loader
+from data_processing.Image_ops import GaussianBlur
 class Multi_Fixtransform(object):
     def __init__(self,
             size_crops,
@@ -29,7 +29,7 @@ class Multi_Fixtransform(object):
                 transforms.ColorJitter(0.4, 0.4, 0.4, 0.1)  # not strengthened
             ], p=0.8),
             transforms.RandomGrayscale(p=0.2),
-            transforms.RandomApply([moco.loader.GaussianBlur([.1, 2.])], p=0.5),
+            transforms.RandomApply([GaussianBlur([.1, 2.])], p=0.5),
             transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
             normalize
@@ -50,7 +50,7 @@ class Multi_Fixtransform(object):
                 transforms.ColorJitter(0.4, 0.4, 0.4, 0.1)  # not strengthened
             ], p=0.8),
             transforms.RandomGrayscale(p=0.2),
-            transforms.RandomApply([moco.loader.GaussianBlur([.1, 2.])], p=0.5),
+            transforms.RandomApply([GaussianBlur([.1, 2.])], p=0.5),
             transforms.RandomHorizontalFlip(),
             RandAugment(n=self.aug_times, m=10),
             transforms.ToTensor(),
@@ -62,7 +62,7 @@ class Multi_Fixtransform(object):
                 transforms.ColorJitter(0.4, 0.4, 0.4, 0.1)  # not strengthened
             ], p=0.8),
             transforms.RandomGrayscale(p=0.2),
-            transforms.RandomApply([moco.loader.GaussianBlur([.1, 2.])], p=0.5),
+            transforms.RandomApply([GaussianBlur([.1, 2.])], p=0.5),
             transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
             normalize

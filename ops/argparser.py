@@ -48,6 +48,7 @@ def argparser():
                              'N processes per node, which has N GPUs. This is the '
                              'fastest way to use PyTorch for either single node or '
                              'multi node data parallel training')
+    parser.add_argument("--nodes_num", type=int, default=1, help="number of nodes to use")
 
     # Baseline: moco specific configs:
     parser.add_argument('--moco_dim', default=128, type=int,

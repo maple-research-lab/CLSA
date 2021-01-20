@@ -15,7 +15,6 @@ class CLSA(nn.Module):
         """
         super(CLSA, self).__init__()
         self.args = args
-        self.type = self.args.type
         self.K = K
         self.m = m
         self.T = T

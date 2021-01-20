@@ -25,8 +25,7 @@ def argparser():
     parser.add_argument('--momentum', default=0.9, type=float, metavar='M',
                         help='momentum of SGD solver')
     parser.add_argument('--weight_decay', default=1e-4, type=float,
-                        metavar='W', help='weight decay (default: 1e-4)',
-                        dest='weight_decay of SGD solver')
+                        help='weight decay (default: 1e-4)')
     parser.add_argument('--print_freq', default=10, type=int,
                         metavar='N', help='print frequency (default: 10)')
     parser.add_argument('--resume', default='', type=str, metavar='PATH',

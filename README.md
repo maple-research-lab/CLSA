@@ -148,21 +148,27 @@ python3 main.py --data=[VOC_dataset_dir] --pretrained=[pretrained_model_path]
 Here VOC directory should be the directory includes "vockit" directory; [VOC_dataset_dir] is the VOC dataset path; [pretrained_model_path] is the imagenet pretrained model path.
 
 ### Transfer to Object Detection
-1. Install [detectron2](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md).
+#### 1. Install [detectron2](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md).
 
-2. Convert a pre-trained CLSA model to detectron2's format:
+#### 2. Convert a pre-trained CLSA model to detectron2's format:
    ```
    # in detection folder
    python3 convert-pretrain-to-detectron2.py input.pth.tar output.pkl
    ```
 
-3. download [VOC Dataset](http://places.csail.mit.edu/user/index.php) and [COCO Dataset](https://cocodataset.org/#download) under "./detection/datasets" directory,
+#### 3. download [VOC Dataset](http://places.csail.mit.edu/user/index.php) and [COCO Dataset](https://cocodataset.org/#download) under "./detection/datasets" directory,
    following the [directory structure](https://github.com/facebookresearch/detectron2/tree/master/datasets) requried by detectron2.
 
-4. Run training:
+#### 4. Run training:
+##### 4.1 Pascal detection
    ```
    cd detection
    python train_net.py --config-file configs/pascal_voc_R_50_C4_24k_CLSA.yaml  --num-gpus 8 MODEL.WEIGHTS ./output.pkl
+   ```
+##### 4.2 COCO detection
+```
+   cd detection
+   python train_net.py --config-file configs/coco_R_50_C4_2x_clsa.yaml --num-gpus 8 MODEL.WEIGHTS ./output.pkl
    ```
 
 

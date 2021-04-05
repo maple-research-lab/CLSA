@@ -150,7 +150,7 @@ Here VOC directory should be the directory includes "vockit" directory; [VOC_dat
 ### Transfer to Object Detection
 1. Install [detectron2](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md).
 
-2. Convert a pre-trained AdCo model to detectron2's format:
+2. Convert a pre-trained CLSA model to detectron2's format:
    ```
    # in detection folder
    python3 convert-pretrain-to-detectron2.py input.pth.tar output.pkl
@@ -162,7 +162,7 @@ Here VOC directory should be the directory includes "vockit" directory; [VOC_dat
 4. Run training:
    ```
    cd detection
-   python train_net.py --config-file configs/pascal_voc_R_50_C4_24k_adco.yaml  --num-gpus 8 MODEL.WEIGHTS ./output.pkl
+   python train_net.py --config-file configs/pascal_voc_R_50_C4_24k_CLSA.yaml  --num-gpus 8 MODEL.WEIGHTS ./output.pkl
    ```
 
 

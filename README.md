@@ -98,8 +98,10 @@ Here the [data_path] should be the root directory of imagenet dataset.
 ### Linear Classification
 With a pre-trained model, we can easily evaluate its performance on ImageNet with:
 ```
-python3 lincls.py --data=./datasets/imagenet2012 --dist-url=tcp://localhost:10001 --pretrained=input.pth.tar
+python3 lincls.py --data=./datasets/imagenet2012 --dist-url=tcp://localhost:10001 --pretrained=[pretrained_model_path]
 ```
+[pretrained_model_path] should be the Imagenet pretrained model path.
+
 Performance:
 <table><tbody>
 <!-- START TABLE -->

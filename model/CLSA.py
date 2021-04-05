@@ -55,7 +55,7 @@ class CLSA(nn.Module):
     @torch.no_grad()
     def _dequeue_and_enqueue(self, queue, queue_ptr, keys):
         # gather keys before updating queue
-        keys = concat_all_gather(keys)
+        #keys = concat_all_gather(keys) #already concatenated before
 
         batch_size = keys.shape[0]
 

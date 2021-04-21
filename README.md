@@ -175,7 +175,7 @@ Here VOC directory should be the directory includes "vockit" directory; [VOC_dat
 
 
 ## Citation:
-[Contrastive Learning with Stronger Augmentations](https://arxiv.org/)
+[Contrastive Learning with Stronger Augmentations](https://arxiv.org/abs/2104.07713)
 ```
 @article{wang2021CLSA,
   title={Contrastive Learning with Stronger Augmentations},

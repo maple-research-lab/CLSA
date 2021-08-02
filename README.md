@@ -177,10 +177,10 @@ Here VOC directory should be the directory includes "vockit" directory; [VOC_dat
 ## Citation:
 [Contrastive Learning with Stronger Augmentations](https://arxiv.org/abs/2104.07713)
 ```
-@article{wang2021CLSA,
-  title={Contrastive Learning with Stronger Augmentations},
+@article{wang2021contrastive,
+  title={Contrastive learning with stronger augmentations},
   author={Wang, Xiao and Qi, Guo-Jun},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:2104.07713},
   year={2021}
 }
 ```
